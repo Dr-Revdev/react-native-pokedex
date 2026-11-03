@@ -6,14 +6,18 @@ import POKEMONS from "../data/pokemon";
 
 export default function Index() {
 
-  const [activeFireFilter, setActiveFireFilter] = useState(false)
+    const [activeFireFilter, setActiveFireFilter] = useState(false)
+
+    const visibles = activeFireFilter
+        ? POKEMONS.filter((pokemon) => pokemon.type === "Feu")
+        : POKEMONS;
     return (
         <FlatList
             numColumns={2}
             columnWrapperStyle={styles.row}
             style={styles.container}
             contentContainerStyle={styles.content}
-            data={POKEMONS}
+            data={visibles}
             keyExtractor={(pokemon) => pokemon.number.toString()}
             renderItem={({ item }) => (
                 <PokemonCard
@@ -25,7 +29,7 @@ export default function Index() {
             ListHeaderComponent={
                 <>
                     <Text style={styles.title}>Mon Pokédex</Text>
-                    <Text style={styles.count}>{POKEMONS.length} Pokémon</Text>
+                    <Text style={styles.count}>{visibles.length} Pokémon</Text>
 
                     <Pressable style={styles.button} onPress={() => setActiveFireFilter(!activeFireFilter)}>
                         <Text>{activeFireFilter ? "Tout afficher" : "Seulement le feu"}</Text>
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
     content: {
         padding: 16,
     },
-    
+
     row: {
     gap: 10,
     },

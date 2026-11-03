@@ -6,10 +6,19 @@ import POKEMONS from "../data/pokemon";
 
 export default function Index() {
 
-    const [activeFireFilter, setActiveFireFilter] = useState(false)
+    const [showCaptured, setShowCaptured] = useState(false);
 
-    const visibles = activeFireFilter
-        ? POKEMONS.filter((pokemon) => pokemon.type === "Feu")
+    const [captured, setCaptured] = useState<number[]>([])
+    const onCaptured = (number: number) => {
+        if (captured.includes(number)) {
+            setCaptured(captured.filter((n) => n !== number));
+        } else {
+            setCaptured([...captured, number]);
+        }
+    };
+
+    const visibles = showCaptured
+        ? POKEMONS.filter((pokemon) => captured.includes(pokemon.number))
         : POKEMONS;
     return (
         <FlatList
@@ -24,15 +33,18 @@ export default function Index() {
                     number={item.number}
                     name={item.name}
                     type={item.type}
+                    captured={captured.includes(item.number)}
+                    onCaptured={onCaptured}
                 />
             )}
             ListHeaderComponent={
                 <>
                     <Text style={styles.title}>Mon Pokédex</Text>
+                    <Text style={styles.count}>{captured.length} capturés</Text>
                     <Text style={styles.count}>{visibles.length} Pokémon</Text>
 
-                    <Pressable style={styles.button} onPress={() => setActiveFireFilter(!activeFireFilter)}>
-                        <Text>{activeFireFilter ? "Tout afficher" : "Seulement le feu"}</Text>
+                    <Pressable style={styles.button} onPress={() => setShowCaptured(!showCaptured)}>
+                        <Text>{showCaptured ? "Tout afficher" : "Mes captures"}</Text>
                     </Pressable>
                 </>
             }

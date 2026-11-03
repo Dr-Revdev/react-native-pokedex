@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 type PokemonCardProps = {
     number: number;
     name: string;
     type: string;
+    captured: boolean;
+    onCaptured: (number: number) => void;
 };
 
 const TYPE_COLORS: Record<string, string> = {
@@ -27,14 +28,9 @@ const TYPE_COLORS: Record<string, string> = {
 const ARTWORK =
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
 
-export default function PokemonCard({ number, name, type }: PokemonCardProps) {
+export default function PokemonCard({ number, name, type, captured, onCaptured }: PokemonCardProps) {
 
     const color = TYPE_COLORS[type] ?? "#EAE9E2";
-    const [isCaptured, setIsCaptured] = useState(false);
-    useEffect(() => {
-        console.log("Affichée :", name);
-        return () => console.log("Retirée :", name);
-    }, []);
     return (
         <View style={[styles.card, { backgroundColor: color }]}>
 
@@ -54,8 +50,8 @@ export default function PokemonCard({ number, name, type }: PokemonCardProps) {
                 </View>
             </View>
 
-            <Pressable style={[styles.captureButton, isCaptured && styles.isCapturedButton]} onPress={() => setIsCaptured(!isCaptured)}>
-                <Text>{isCaptured ? "Capturé ✓" : "Capturé"}</Text>
+            <Pressable style={[styles.captureButton, captured && styles.isCapturedButton]} onPress={() => onCaptured(number)}>
+                <Text>{captured ? "Capturé ✓" : "Capturé"}</Text>
             </Pressable>
 
         </View>

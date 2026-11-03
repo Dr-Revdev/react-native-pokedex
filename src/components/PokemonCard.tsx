@@ -8,11 +8,21 @@ type PokemonCardProps = {
 };
 
 const TYPE_COLORS: Record<string, string> = {
-    Plante: "#78C850",
+    Normal: "#A8A878",
     Feu: "#F08030",
     Eau: "#6890F0",
+    Plante: "#78C850",
     Électrik: "#F8D030",
+    Combat: "#C03028",
+    Poison: "#A040A0",
+    Sol: "#E0C068",
+    Psy: "#F85888",
+    Insecte: "#A8B820",
+    Roche: "#B8A038",
+    Spectre: "#705898",
+    Fée: "#EE99AC",
 };
+
 
 const ARTWORK =
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";

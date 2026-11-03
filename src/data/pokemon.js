@@ -1,15 +1,15 @@
-// Les 100 premiers PokÃ©mon (noms franÃ§ais).
+// Les 100 premiers Pokémon (noms français).
 // type : le type principal uniquement.
 // Image : https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{number}.png
 //
-// Ã€ placer dans src/data/pokemons.js (surtout pas dans src/app/ !)
+// À placer dans src/data/pokemons.js (surtout pas dans src/app/ !)
 // Utilisation : import POKEMONS from "../data/pokemons";
 
 const POKEMONS = [
   { number: 1, name: "Bulbizarre", type: "Plante" },
   { number: 2, name: "Herbizarre", type: "Plante" },
   { number: 3, name: "Florizarre", type: "Plante" },
-  { number: 4, name: "SalamÃ¨che", type: "Feu" },
+  { number: 4, name: "Salamèche", type: "Feu" },
   { number: 5, name: "Reptincel", type: "Feu" },
   { number: 6, name: "Dracaufeu", type: "Feu" },
   { number: 7, name: "Carapuce", type: "Eau" },
@@ -30,18 +30,18 @@ const POKEMONS = [
   { number: 22, name: "Rapasdepic", type: "Normal" },
   { number: 23, name: "Abo", type: "Poison" },
   { number: 24, name: "Arbok", type: "Poison" },
-  { number: 25, name: "Pikachu", type: "Ã‰lectrik" },
-  { number: 26, name: "Raichu", type: "Ã‰lectrik" },
+  { number: 25, name: "Pikachu", type: "Électrik" },
+  { number: 26, name: "Raichu", type: "Électrik" },
   { number: 27, name: "Sabelette", type: "Sol" },
   { number: 28, name: "Sablaireau", type: "Sol" },
-  { number: 29, name: "Nidoranâ™€", type: "Poison" },
+  { number: 29, name: "Nidoran♀", type: "Poison" },
   { number: 30, name: "Nidorina", type: "Poison" },
   { number: 31, name: "Nidoqueen", type: "Poison" },
-  { number: 32, name: "Nidoranâ™‚", type: "Poison" },
+  { number: 32, name: "Nidoran♂", type: "Poison" },
   { number: 33, name: "Nidorino", type: "Poison" },
   { number: 34, name: "Nidoking", type: "Poison" },
-  { number: 35, name: "MÃ©lofÃ©e", type: "FÃ©e" },
-  { number: 36, name: "MÃ©lodelfe", type: "FÃ©e" },
+  { number: 35, name: "Mélofée", type: "Fée" },
+  { number: 36, name: "Mélodelfe", type: "Fée" },
   { number: 37, name: "Goupix", type: "Feu" },
   { number: 38, name: "Feunard", type: "Feu" },
   { number: 39, name: "Rondoudou", type: "Normal" },
@@ -54,19 +54,19 @@ const POKEMONS = [
   { number: 46, name: "Paras", type: "Insecte" },
   { number: 47, name: "Parasect", type: "Insecte" },
   { number: 48, name: "Mimitoss", type: "Insecte" },
-  { number: 49, name: "AÃ©romite", type: "Insecte" },
+  { number: 49, name: "Aéromite", type: "Insecte" },
   { number: 50, name: "Taupiqueur", type: "Sol" },
   { number: 51, name: "Triopikeur", type: "Sol" },
   { number: 52, name: "Miaouss", type: "Normal" },
   { number: 53, name: "Persian", type: "Normal" },
   { number: 54, name: "Psykokwak", type: "Eau" },
   { number: 55, name: "Akwakwak", type: "Eau" },
-  { number: 56, name: "FÃ©rosinge", type: "Combat" },
+  { number: 56, name: "Férosinge", type: "Combat" },
   { number: 57, name: "Colossinge", type: "Combat" },
   { number: 58, name: "Caninos", type: "Feu" },
   { number: 59, name: "Arcanin", type: "Feu" },
   { number: 60, name: "Ptitard", type: "Eau" },
-  { number: 61, name: "TÃªtarte", type: "Eau" },
+  { number: 61, name: "Têtarte", type: "Eau" },
   { number: 62, name: "Tartard", type: "Eau" },
   { number: 63, name: "Abra", type: "Psy" },
   { number: 64, name: "Kadabra", type: "Psy" },
@@ -74,7 +74,7 @@ const POKEMONS = [
   { number: 66, name: "Machoc", type: "Combat" },
   { number: 67, name: "Machopeur", type: "Combat" },
   { number: 68, name: "Mackogneur", type: "Combat" },
-  { number: 69, name: "ChÃ©tiflor", type: "Plante" },
+  { number: 69, name: "Chétiflor", type: "Plante" },
   { number: 70, name: "Boustiflor", type: "Plante" },
   { number: 71, name: "Empiflor", type: "Plante" },
   { number: 72, name: "Tentacool", type: "Eau" },
@@ -86,8 +86,8 @@ const POKEMONS = [
   { number: 78, name: "Galopa", type: "Feu" },
   { number: 79, name: "Ramoloss", type: "Eau" },
   { number: 80, name: "Flagadoss", type: "Eau" },
-  { number: 81, name: "MagnÃ©ti", type: "Ã‰lectrik" },
-  { number: 82, name: "MagnÃ©ton", type: "Ã‰lectrik" },
+  { number: 81, name: "Magnéti", type: "Électrik" },
+  { number: 82, name: "Magnéton", type: "Électrik" },
   { number: 83, name: "Canarticho", type: "Normal" },
   { number: 84, name: "Doduo", type: "Normal" },
   { number: 85, name: "Dodrio", type: "Normal" },
@@ -105,7 +105,7 @@ const POKEMONS = [
   { number: 97, name: "Hypnomade", type: "Psy" },
   { number: 98, name: "Krabby", type: "Eau" },
   { number: 99, name: "Krabboss", type: "Eau" },
-  { number: 100, name: "Voltorbe", type: "Ã‰lectrik" },
+  { number: 100, name: "Voltorbe", type: "Électrik" },
 ];
 
 export default POKEMONS;

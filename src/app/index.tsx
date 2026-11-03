@@ -9,6 +9,8 @@ export default function Index() {
   const [activeFireFilter, setActiveFireFilter] = useState(false)
     return (
         <FlatList
+            numColumns={2}
+            columnWrapperStyle={styles.row}
             style={styles.container}
             contentContainerStyle={styles.content}
             data={POKEMONS}
@@ -63,5 +65,9 @@ const styles = StyleSheet.create({
 
     content: {
         padding: 16,
+    },
+    
+    row: {
+    gap: 10,
     },
 });

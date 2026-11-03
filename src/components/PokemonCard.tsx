@@ -54,7 +54,8 @@ export default function PokemonCard({ number, name, type }: PokemonCardProps) {
 
 const styles = StyleSheet.create({
     card: {
-        flexDirection: "row",
+        flex: 1,
+        flexDirection: "column",
         alignItems: "center",
         backgroundColor: "#FFFFFF",
         borderRadius: 16,
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#EAE9E2",
         justifyContent: "center",
         alignItems: "center",
-        marginRight: 12,
+        marginBottom: 12,
     },
 
     image: {
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
     },
 
     content: {
-        flex: 1,
+        alignItems: "center"
     },
 
     number: {
